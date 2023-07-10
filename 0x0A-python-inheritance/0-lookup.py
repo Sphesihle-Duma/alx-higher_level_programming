@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""functions that 
-   returns a list
+""" function return a list
 """
 
 
