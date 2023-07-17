@@ -117,10 +117,14 @@ class Rectangle(Base):
         fourth = " - {}/{}".format(self.__width, self.__height)
         return first + second + third + fourth
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the attributes
         """
-        num_args = len(args)
-        attr_names = ["id", 'width', "height", "x", "y"]
-        for i in range(min(num_args, len(attr_names))):
-            setattr(self, attr_names[i], args[i])
+        if args:
+            num_args = len(args)
+            attr_names = ["id", 'width', "height", "x", "y"]
+            for i in range(min(num_args, len(attr_names))):
+                setattr(self, attr_names[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
