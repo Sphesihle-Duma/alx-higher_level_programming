@@ -98,3 +98,9 @@ class Rectangle(Base):
         rectangle
         """
         return (self.__width * self.__height)
+
+    def display(self):
+        """Display rectangle with #
+        """
+        for i in range(self.__height):
+            print("#" * self.__width)
