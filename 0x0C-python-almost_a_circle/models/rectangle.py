@@ -47,11 +47,11 @@ class Rectangle(Base):
         self.__x = x
 
     @property
-    def y(self, y):
+    def y(self):
         """Returns y"""
         return self.__y
 
     @y.setter
-    def y(self):
+    def y(self, y):
         """setter method for y"""
         self.__y = y
