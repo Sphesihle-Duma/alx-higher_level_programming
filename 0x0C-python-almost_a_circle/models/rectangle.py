@@ -109,4 +109,8 @@ class Rectangle(Base):
         """return string representation
         of the instance
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        first = "[Rectangle] "
+        second = "({}) ".format(self.id)
+        third = "{}/{}".format(self.__x, self.__y)
+        fourth = " - {}/{}".format(self.__width, self.__height)
+        return first + second + third + fourth
