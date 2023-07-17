@@ -21,11 +21,11 @@ class Rectangle(Base):
         elif type(x) is not int:
             raise TypeError("x must be an integer")
         elif x < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be => 0")
         elif type(y) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("y must be an integer")
         elif y < 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("y must be => 0")
         else:
             self.__width = width
             self.__height = height
@@ -74,7 +74,7 @@ class Rectangle(Base):
         if type(x) is not int:
             raise TypeError("x must be an integer")
         elif x < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be => 0")
         else:
             self.__x = x
 
@@ -87,8 +87,8 @@ class Rectangle(Base):
     def y(self, y):
         """setter method for y"""
         if type(y) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("y must be an integer")
         elif y < 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("y must be => 0")
         else:
             self.__y = y
