@@ -1,3 +1,4 @@
+-- Lists all the names of all genres
 SELECT tv_genres.name
 FROM tv_genres
 INNER JOIN tv_show_genres
