@@ -1,6 +1,6 @@
 -- Lists all genres that are not linked to the show
 SELECT g.name
-FROM tv_genres as g
+FROM tv_genres AS g
 LEFT JOIN(
 	SELECT * 
 	FROM tv_shows AS s
