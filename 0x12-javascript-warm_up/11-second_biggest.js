@@ -12,8 +12,8 @@ if (array.length === 2 || array.length === 3) {
       indexOfMax = i;
     }
   }
-  let secondMax = parseInt(array[2]);
-  for (let i = 3; i < array.length; i++) {
+  let secondMax = 0;
+  for (let i = 2; i < array.length; i++) {
     if (i === indexOfMax) {
       continue;
     }
