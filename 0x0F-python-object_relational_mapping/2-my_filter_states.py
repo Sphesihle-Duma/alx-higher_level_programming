@@ -22,12 +22,9 @@ if __name__ == "__main__":
     db_conn = MySQLdb.connect(host=host, user=user, passwd=passwd,
                               db=db, port=pt)
     cur = db_conn.cursor()
-    query = """SELECT * FROM states
-            WHERE name
-            LIKE %s
-            ORDER BY id ASC
-            """
-    cur.execute(query, (state_name, ))
+    cur.execute("SELECT * FROM states \
+                WHERE CONVERT(name USING latin1) \
+                COLLATE Latin1_General_CS = '{}';".format(state_name))
     states = cur.fetchall()
     for state in states:
         print(state)
