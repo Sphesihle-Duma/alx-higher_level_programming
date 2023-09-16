@@ -15,7 +15,10 @@ if __name__ == "__main__":
     ht = "localhost"
     db = MySQLdb.connect(host=ht, user=user, passwd=ps, db=db1, port=pt)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states \
+            WHERE CONVERT(`name` USING Latin1)\
+            COLLATE Latin1_General_CS \
+            LIKE 'N%' ORDER BY id")
     results = cur.fetchall()
     for result in results:
         print(result)
