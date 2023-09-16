@@ -27,7 +27,7 @@ if __name__ == "__main__":
             """
     cur.execute(query, (state_name, ))
     cities = cur.fetchall()
-    for city in cities:
-        print(city[0].join(", "), end="")
+    city_names = [city[0] for city in cities]
+    print(", ".join(city_names))
     cur.close()
     db_conn.close()
