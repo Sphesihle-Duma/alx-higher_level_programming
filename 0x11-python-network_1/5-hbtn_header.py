@@ -5,6 +5,7 @@ displays the value of a variable in the response header
 """
 import requests
 import sys
+from requests.exceptions import RequestException
 
 
 if __name__ == "__main__":
